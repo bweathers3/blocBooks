@@ -32,7 +32,7 @@ PLATFORMS
 DEPENDENCIES
   bloc_works!
   rack (~> 1.6)
-  rake (~> 10.0)
+  rake (~> 10.4)
   sqlite3
 
 BUNDLED WITH
