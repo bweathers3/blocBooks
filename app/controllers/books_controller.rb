@@ -1,12 +1,14 @@
+require 'pry'
+
 class BooksController < BlocWorks::Controller
 
   def welcome
-    puts "inside welcome"
     render :welcome, book: "Eloquent Ruby"
   end
 
   def index
-    puts "inside index"
-    render :index, books: Book.all
+    puts "gets to index"
+    @books = Book.all
+    render :index, books: @books
   end
 end
