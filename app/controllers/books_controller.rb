@@ -7,7 +7,7 @@ class BooksController < BlocWorks::Controller
   end
 
   def index
-    puts "gets to index"
+    #puts "gets to index"
     @books = Book.all
     render :index, books: @books
   end
