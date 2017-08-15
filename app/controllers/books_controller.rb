@@ -5,6 +5,18 @@ class BooksController < BlocWorks::Controller
   end
 
   def index
+    #puts "gets to index"
     render :index, books: Book.all
   end
+
+  def show
+    #puts "gets to show"
+    book = Book.find(params['id'])
+    render :show, book: book
+  end
+
+  def new
+    @book = Book.new
+  end
+
 end
