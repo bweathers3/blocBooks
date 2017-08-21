@@ -2,13 +2,10 @@ require './config/application'
 
 app = BlocWorks::Application.new
 
- use Rack::ContentType
+use Rack::ContentType
 
- app.route do
-   map "", "books#welcome"
-   map ":controller/:id/:action"
-   map ":controller/:id", default: { "action" => "show" }
-   map ":controller", default: { "action" => "index" }
- end
+app.route do
+  resources :books
+end
 
- run(app)
+run(app)
